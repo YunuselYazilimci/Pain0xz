@@ -1,0 +1,37 @@
+#include <iostream>
+#include <ctime>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+
+void ozellikler(string isim,int yas,int boy, int kilo, string cinsiyet) {
+	if (cinsiyet == "erkek") {
+	}else if (cinsiyet == "kız") {
+	}else if (cinsiyet == "kiz") {
+	}
+	else {
+		cinsiyet = "igrenc bir yaratik";
+	}
+	cout << "isminiz :  " << isim << "  cinsiyetiniz:  " << cinsiyet << "\n";
+	cout << "yasiniz: " << yas << "   boyunuz: " << boy << "  kilonuz: " << kilo;
+}
+	
+int main() {
+	setlocale(LC_ALL, "Turkish");
+	string isim, cinsiyet;
+	int yas, boy, kilo;
+	cout << "isminizi ve cinsiyetinizi giriniz:  ";
+	cin >> isim;
+	cin >> cinsiyet;
+	cout << "yasinizi kilonuzu ve boyunuzu giriniz:  ";
+	cin >> yas;
+	cin >> boy;
+	cin >> kilo;
+	ozellikler(isim, yas, boy, kilo, cinsiyet);
+
+
+
+
+
+}
