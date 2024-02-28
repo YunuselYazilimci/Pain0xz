@@ -5,23 +5,35 @@
 #pragma warning (disable:4996)
 using namespace std;
 
-int islem(int x, int y) {
-	
-	if (x < y) {
-		cout << y << " daha buyuktur.";
-}else {
-	cout << x << " daha buyuktur.";
-		}
-	return 0;
+void ozellikler(string isim, int yas, int boy, int kilo, string cinsiyet) {
+	if (cinsiyet == "erkek") {
+	}
+	else if (cinsiyet == "kız") {
+	}
+	else if (cinsiyet == "kiz") {
+	}
+	else {
+		cinsiyet = "igrenc bir yaratik";
+	}
+	cout << "isminiz :  " << isim << "  cinsiyetiniz:  " << cinsiyet << "\n";
+	cout << "yasiniz: " << yas << "   boyunuz: " << boy << "  kilonuz: " << kilo;
 }
 
 int main() {
 	setlocale(LC_ALL, "Turkish");
-	int x, y;
-	cout << "1.sayıyı giriniz: ";
-	cin >> x;
-	cout << "2.sayıyı giriniz: ";
-	cin >> y;
-	islem(x, y);
-	return 0;
+	string isim, cinsiyet;
+	int yas, boy, kilo;
+	cout << "isminizi ve cinsiyetinizi giriniz:  ";
+	cin >> isim;
+	cin >> cinsiyet;
+	cout << "yasinizi kilonuzu ve boyunuzu giriniz:  ";
+	cin >> yas;
+	cin >> boy;
+	cin >> kilo;
+	ozellikler(isim, yas, boy, kilo, cinsiyet);
+
+
+
+
+
 }
