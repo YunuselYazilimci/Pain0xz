@@ -1,0 +1,31 @@
+#include <iostream>
+#include <ctime>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+int arasi(int x, int y) {
+	if (x > y)
+	{
+		for (int i = x; i >= y; i--)
+		{
+			cout << "  " << i;
+		}
+	}else if(x < y)
+	{
+		for (int i = x; i <= y; i++)
+		{
+			cout << "  " << i;
+		}
+	}
+	return 0;
+}
+int main() {
+	int x, y;
+	cout << "1.sayiyi giriniz:  ";
+	cin >> x;
+	cout << "2.sayiyi giriniz:  ";
+	cin >> y;
+	arasi(x, y);
+	return 0;
+}
