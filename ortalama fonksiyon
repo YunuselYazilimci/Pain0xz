@@ -1,0 +1,26 @@
+#include <iostream>
+#include <ctime>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+int isimyazdır() {
+	int sayi[5];
+	int ort = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << i + 1 << ". sayiyi giriniz:   ";
+		cin >> sayi[i];
+	}
+	
+	for (int i = 0; i < 5; i++)
+	{
+		ort += sayi[i];
+	}
+	cout << "ortalama :  " << ort / 5;
+	return ort;
+}
+int main() {
+	isimyazdır();
+	return 0;
+}
