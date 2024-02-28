@@ -1,0 +1,23 @@
+#include <iostream>
+#include <ctime>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+void isimyazdır() {
+	string isim[5];
+	for (int i = 0; i < 5; i++)
+	{
+		cout << i+ 1  << ". ismi giriniz:   ";
+		cin >> isim[i];
+	}
+	for (int i = 0; i < 5; i++)
+	{
+
+		cout << isim[i]<< "\n";
+	}
+}
+int main() {
+	isimyazdır();
+	return 0;
+}
