@@ -7,7 +7,7 @@
 using namespace std;
 
 void menu(){
-	cout << "Merhabalar Yapmak istediginiz islermleri rakamlari tuslayarak yapiniz\n";
+	cout << "Merhabalar Yapmak istediginiz islemleri rakamlari tuslayarak yapiniz\n";
 	cout <<	"1 Para yatir\n2 Para cek\n3 Bakiye goruntule(1 tlciik keser)\n4 kullanici adi degistir\n5 sifre degistir\n6 Cikis\n--> ";
 }
 
@@ -74,6 +74,7 @@ int main() {
 		    if (bakiye != 0){
 			bakiye -= 1;
 			 cout <<"Bakiyeniz :  " << bakiye << endl;
+			 Sleep(1000);
 		        
 		}else{
 			cout << "Bakiyenizde 1tl bulunmamakta  :(\n";
@@ -110,22 +111,24 @@ int main() {
 }
              cout << "Bizi tercih ettiginiz icin tesekkurler. \n";
              cout << "g";
-             Sleep(100);
+             Sleep(150);
              cout << "o";
-             Sleep(100);
+             Sleep(150);
              cout << "r";
-             Sleep(100);
+             Sleep(150);
              cout << "u";
-             Sleep(100);
+             Sleep(150);
              cout << "s";
-             Sleep(100);
+             Sleep(150);
              cout << "u";
-             Sleep(100);
+             Sleep(150);
              cout << "r";
-             Sleep(100);
+             Sleep(150);
              cout << "u";
-             Sleep(100);
+             Sleep(150);
              cout << "z";
-             
+             Sleep(150);
+             cout << "~~";
+             Sleep(150);
  return 0;
 }
