@@ -1,0 +1,130 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+
+void menu(){
+	cout << "Merhabalar Yapmak istediginiz islermleri rakamlari tuslayarak yapiniz\n";
+	cout <<	"1 Para yatir\n2 Para cek\n3 Bakiye goruntule(1 tlciik keser)\n4 kullanici adi degistir\n5 sifre degistir\n6 Cikis\n--> ";
+}
+
+int main() {
+	int secim, miktar, miktar2;
+	int bakiye = 500;
+	string asilkullanici = "selam";
+	string asilsifre = "as";
+	string sifre, kullanici, evet;
+	bool kontrol = false;
+	while(secim != 6){
+	while(kontrol == false){
+	
+	cout << "Kullanici adinizi giriniz\n--> ";
+	cin >> kullanici;
+	cout << "Sifrenizi giriniz\n--> ";
+	cin >> sifre;
+	if(asilkullanici == kullanici && sifre == asilsifre){
+		kontrol = true;
+	}else if(kullanici != asilkullanici && sifre != asilsifre){
+		cout << "kullanici adi ve sifre yanlis\n";
+		Sleep(2000);
+		system("cls");
+	}else if(kullanici != asilkullanici ) {
+		cout << "kullanici adi yanlis\n";
+		Sleep(2000);
+		system("cls");
+	}else if(sifre != asilsifre){
+		cout << "sifre yanlis\n";
+		Sleep(2000);
+		system("cls");
+	}
+}   cout << "Giris basarili~~~\n\n";
+	Sleep(1000);
+	system("cls");
+	menu();
+	cin>> secim;
+	switch(secim){
+		case 1:
+			system("cls");
+			cout << "Yatirmak istediginiz miktari yaziniz : \n";
+			cin >> miktar;
+			if(miktar > 0){
+			bakiye += miktar; 
+		}else{
+			cout << "Yanlis para birimi ,lutfen tekrar deneyiniz \n";
+		}	break;
+		case 2:
+			    system("cls");
+		        cout << "Cekmek istediginiz miktari giriniz : \n";
+		        cin >> miktar2;
+		        if(bakiye >= miktar2 && miktar2 > 0){
+		        bakiye -= miktar2;	
+				}else if(bakiye >= miktar2){
+				cout << "Yetersiz bakiye islemin onaylanmadi\n";
+				}else if(miktar2 > 0){
+					cout << "Yanlis para birimi ,lutfen tekrar deneyiniz\n";
+				}
+		        break;
+		case 3: 
+		    system("cls");
+		    if (bakiye != 0){
+			bakiye -= 1;
+			 cout <<"Bakiyeniz :  " << bakiye << endl;
+		        break;
+		}else{
+			cout << "Bakiyenizde 1tl bile yok iyyyyyyyy\n";
+		}
+		case 4: cout << "Kullanici adini degistirmek istediginize emin misiniz? : ";
+				cin >> evet;
+				system("cls");
+				if(evet == "evet"){
+				cout << "Yeni kullanici adini giriniz\n--> ";
+				cin >> asilkullanici;
+				kontrol = false;
+				system("cls");
+				break;
+			}else{
+				break;
+			}
+			
+		        
+		case 5: cout << "Sifreyi degistirmek istediginize emin misiniz? : ";
+				cin >> evet;
+				system("cls");
+				if(evet == "evet"){
+				cout << "Yeni sifreyi giriniz\n--> ";
+				cin >> asilsifre;
+				kontrol = false;
+				system("cls");
+				break;
+			}else{
+				break;
+			}
+		case 6: break;
+		default : cout << "Hatali giris yaptiniz lutfen tekrar deneyiniz\n";
+		break;
+	}  
+}
+             cout << "Bizi tercih ettiginiz icin tesekkurler. \n";
+             cout << "g";
+             Sleep(100);
+             cout << "o";
+             Sleep(100);
+             cout << "r";
+             Sleep(100);
+             cout << "u";
+             Sleep(100);
+             cout << "s";
+             Sleep(100);
+             cout << "u";
+             Sleep(100);
+             cout << "r";
+             Sleep(100);
+             cout << "u";
+             Sleep(100);
+             cout << "z";
+             
+ return 0;
+}
