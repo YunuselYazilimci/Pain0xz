@@ -27,6 +27,7 @@ int main() {
 	cin >> sifre;
 	if(asilkullanici == kullanici && sifre == asilsifre){
 		kontrol = true;
+		cout << "Giris basarili~~~\n\n";
 	}else if(kullanici != asilkullanici && sifre != asilsifre){
 		cout << "kullanici adi ve sifre yanlis\n";
 		Sleep(2000);
@@ -40,7 +41,8 @@ int main() {
 		Sleep(2000);
 		system("cls");
 	}
-}   cout << "Giris basarili~~~\n\n";
+		
+}   
 	Sleep(1000);
 	system("cls");
 	menu();
@@ -72,10 +74,11 @@ int main() {
 		    if (bakiye != 0){
 			bakiye -= 1;
 			 cout <<"Bakiyeniz :  " << bakiye << endl;
-		        break;
+		        
 		}else{
-			cout << "Bakiyenizde 1tl bile yok iyyyyyyyy\n";
+			cout << "Bakiyenizde 1tl bulunmamakta  :(\n";
 		}
+		break;
 		case 4: cout << "Kullanici adini degistirmek istediginize emin misiniz? : ";
 				cin >> evet;
 				system("cls");
@@ -88,8 +91,6 @@ int main() {
 			}else{
 				break;
 			}
-			
-		        
 		case 5: cout << "Sifreyi degistirmek istediginize emin misiniz? : ";
 				cin >> evet;
 				system("cls");
