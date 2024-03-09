@@ -1,0 +1,51 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+string a, b, c, d, e; // burası kullanıcının özellikleri
+//ad soyad tc tel okulno mail
+
+		
+	
+	
+void menu(){
+	cout << "Kullanici eklemek icin 1'i\nKullanici Goruntulemek icin 2'yi\nYaziniz~~~\n--> ";
+	
+	
+}
+void kullanici_olustur(){
+	cout << "Adinizi giriniz :  ";
+	cin >> a;
+	cout << "Soyadinizi giriniz:  ";
+	cin >> b;
+	cout << "TC`nizi giriniz:  ";
+	cin >> c;
+	cout << "Mailinizi giriniz : ";
+	cin >> d;
+	cout << "Okul nonuzu giriniz :  ";
+	cin >> e;
+}
+void kullanici_goruntule(){
+	
+	cout << "Adiniz :  " <<a << endl << "Soyadiniz :  " << b << endl << "TC`niz : " << c << endl << "Mailiniz : "<< d << endl << "Okul No`nuz : "<< e << endl;
+}
+int main() {
+	bool kontrol = true;
+	while(kontrol == true){
+	menu();
+    int secim;
+    cin >> secim;
+    switch(secim){
+    case 1:     kullanici_olustur();
+    			break;
+    	case 2: kullanici_goruntule();
+    			break;
+    	default: kontrol = false;
+	            break;
+	}
+    return 0;
+ }
+}
