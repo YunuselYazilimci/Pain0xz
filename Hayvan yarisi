@@ -1,0 +1,73 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+
+
+int rastgele_sayi() {
+	int rastgele;
+	srand(time(NULL));
+	rastgele = (rand() % 10) + 1;
+	return rastgele;
+}
+
+
+int main() {
+	int secim;
+	bool At = false;
+	bool Koyun = false;
+	cout << "Sa hayvan Yarisina Hos Geldiniz~~";
+	Sleep(2000);
+	system("cls");
+	cout << "Bir hayvanin basindaki numarayi seciniz~~\n1- Atmik\n2- Koyun\n\nBu arada hayvanlarin gercek hayatta hizlariyla alakasi yoktur :)\n--> ";
+	cin >> secim;
+	system("cls");
+	cout << "\n\nAtmik";
+	int x = rastgele_sayi();
+	for (int i = 0; i < x; i++)
+	{
+		Sleep(100);
+		cout << "*";
+		
+	}
+	cout << "\n\nKoyun";
+	int y = rastgele_sayi();
+	for (int i = 0; i < y; i++)
+	{
+		Sleep(100);
+		cout << "*";
+
+	}
+	if (secim == 1) {
+		cout << " \nSeciminiz:  " << "Atmik";
+	}
+	else if (secim == 2) {
+		cout << " \nSeciminiz:  " << "Koyun";
+	}
+	
+	if (x < y) {
+		if (secim == 1) {
+			cout << "\nkaybettiniz";
+		}
+		else if (secim != 1) {
+			cout << "\nkazandiniz";
+		}
+	}if (x > y) {
+		if (secim == 1) {
+			cout << "\nkazandiniz";
+		}
+		else if (secim != 1) {
+			cout << "\nkaybettiniz";
+		}
+	}if (x == y) {
+		cout << "\nberabere";
+	}
+	
+	
+
+	return 0;
+}
+
