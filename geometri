@@ -1,0 +1,163 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include<locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+
+
+void ucgen() {
+	int secim;
+	int a, b;
+	int x, y, z;
+	cout << "Ucgenin alanini mi cevresini mi hesaplamak istersiniz\n1- Alan\n2- Cevre\n--> ";
+	cin >> secim;
+	if (secim == 1) {
+		cout << "Sirasiyla arasinda bosluk birakarak yuksekligi taban uzunlugunu giriniz: ";
+		cin >> a;
+		cin >> b;
+		cout <<"Aradginiz sonuc: " << (a * b) / 2;
+	}
+	else if (secim == 2) {
+		cout << "Sirasiyla arasinda bosluk birakarak kenarlarni giriniz:  ";
+		cin >> x;
+		cin >> y;
+		cin >> z;
+		cout << "Aradiginiz sonuc: " << x + y + z;
+	}
+}
+void dikdortgen() {
+	int secim2;
+	int a, b;
+	cout << "Dikdortgenin alanini mi cevresini mi hesaplamak istersiniz\n1- Alan\n2- Cevre\n--> ";
+	cin >> secim2;
+	switch (secim2) {
+	case 1: cout << "sirasiyla arasinda bosluk olacak sekilde uzun kenarini ve kisa kenarini giriniz:  ";
+		cin >> a;
+		cin >> b;
+		cout << "Aradiginiz sonuc : " << a * b;
+		break;
+
+	case 2: cout << "Sirasiyla arasinda bosluk olacak sekilde uzun kenarini ve kisa kenarini giriniz:  ";
+		cin >> a;
+		cin >> b;
+		cout << "Aradiginiz sonuc : " << (a + b) * 2;
+		break;
+	}
+}
+
+void kare() {
+	int secim2;
+	int a;
+	cout << "Karenin alanini mi cevresini mi hesaplamak istersiniz\n1- Alan\n2- Cevre\n--> ";
+	cin >> secim2;
+	switch (secim2) {
+	case 1: cout << "Karenin 1 kenarani giriniz:  ";
+		cin >> a;
+		cout << "Aradiginiz sonuc : " << a * a;
+		break;
+
+	case 2: cout << "Karenin 1 kenarini giriniz:  ";
+		cin >> a;
+		cout << "Aradiginiz sonuc : " << a * 4;
+		break;
+	}
+}
+void daire() {
+	int secim2;
+	int a;
+	cout << "Dairenin alanini mi cevresini mi hesaplamak istersiniz\n1- Alan\n2- Cevre\n--> ";
+	cin >> secim2;
+	switch (secim2) {
+	case 1: cout << "Yaricapini giriniz: ";
+		cin >> a;
+		cout << "Aradiginiz sonuc : " << 2 * 3.14 * a;
+		break;
+
+	case 2: cout << "Yaricapini giriniz: ";
+		cin >> a;
+		cout << "Aradiginiz sonuc : " << 3.14 * a * a;
+		break;
+	}
+}
+
+
+
+
+
+
+
+
+void dikrotgen() {
+	
+}
+
+int main() {
+	int secim;
+	bool kontrol = false;
+	string bitirekmi;
+	
+
+	while (kontrol == false) {
+		cout << "selamlar alan hesaplamaya hos geldiniz \nLutfen hesaplamak istediginiz sekili seciniz.\n1- Ucgen\n2- Dikdortgen\n3- Kare\n4- Daire\n--> ";
+		cin >> secim;
+		switch (secim) {
+
+
+
+		case 1:
+			ucgen();
+			break;
+		case 2:
+			dikdortgen();
+			break;
+		case 3:
+			kare();
+			break;
+		case 4:
+			daire();
+			break;
+		default:
+			cout << "yanlis tuslama yaptiniz tekrar deneyiniz";
+			break;
+		}
+		Sleep(4000);
+		system("cls");
+		cout << "Isleminizi sonlandirmak icin evet giriniz\nDevam etmek icin herhangi bir karakter giriniz\n-->";
+		cin >> bitirekmi;
+		if (bitirekmi == "evet") {
+			kontrol = true;
+		}
+		else {
+			cout << "2 saniye sonra isleminiz donucektir lutfen bekleyiniz";
+			Sleep(2000);
+			system("cls");
+			kontrol = false;
+		}
+		
+	}
+	cout << "Bizi tercih ettiginiz icin tesekkurler. \n";
+	cout << "g";
+	Sleep(150);
+	cout << "o";
+	Sleep(150);
+	cout << "r";
+	Sleep(150);
+	cout << "u";
+	Sleep(150);
+	cout << "s";
+	Sleep(150);
+	cout << "u";
+	Sleep(150);
+	cout << "r";
+	Sleep(150);
+	cout << "u";
+	Sleep(150);
+	cout << "z";
+	Sleep(150);
+	cout << "~~";
+	Sleep(150);
+
+	return 0;
+}
